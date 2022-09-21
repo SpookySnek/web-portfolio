@@ -62,6 +62,48 @@ const carl = new THREE.Mesh(new THREE.CircleGeometry(3, 64), new THREE.MeshBasic
 scene.add(carl);
 
 
+
+const marsTexture = new THREE.TextureLoader().load('../public/mars.jpg');
+const normalTexture = new THREE.TextureLoader().load('../public/normal.jpg');
+
+const mars = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: marsTexture,
+    normalMap: normalTexture,
+  })
+);
+scene.add(mars);
+
+
+
+mars.position.z = 30;
+mars.position.x = -10;
+
+carl.position.z = -5;
+carl.position.x = 2;
+
+
+
+function scrollCamera() {
+    const t = document.body.getBoundingClientRect().top;
+    mars.rotation.x += 0.05;
+    mars.rotation.y += 0.075;
+    mars.rotation.z += 0.05;
+  
+    carl.rotation.y += 0.01;
+    carl.rotation.z += 0.01;
+  
+    camera.position.z = t * -0.01;
+    camera.position.x = t * -0.0002;
+    camera.rotation.y = t * -0.0002;
+  }
+  
+  document.body.onscroll = scrollCamera;
+  scrollCamera();
+
+
+
 function animate() {
     requestAnimationFrame( animate );
 
