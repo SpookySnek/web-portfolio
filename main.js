@@ -19,22 +19,19 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
-const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
-const material = new THREE.MeshPhongMaterial( { color: 0xFF6347 } );
+const geometry = new THREE.TorusGeometry( 10, 0.9, 16, 100 );
+const material = new THREE.MeshPhongMaterial( { color: 0xc5b358, shininess: 100 } );
 const torus = new THREE.Mesh( geometry, material );
 
 scene.add( torus );
 
-const pointLight = new THREE.PointLight(0xffffff);
+const pointLight = new THREE.PointLight(0xA020F0);
 pointLight.position.set(20,20,20);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight)
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper)
-//Remember to comment helper functions out when you are done with them
+
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -89,12 +86,15 @@ carl.position.x = 2;
 
 function scrollCamera() {
     const t = document.body.getBoundingClientRect().top;
-    mars.rotation.x += 0.05;
-    mars.rotation.y += 0.075;
-    mars.rotation.z += 0.05;
+    mars.rotation.x += 0.01;
+    mars.rotation.y += 0.035;
+    mars.rotation.z += 0.01;
   
     carl.rotation.y += 0.01;
-    carl.rotation.z += 0.01;
+
+    torus.rotation.x += 0.03;
+    torus.rotation.y += 0.009;
+    torus.rotation.z += 0.03;
   
     camera.position.z = t * -0.01;
     camera.position.x = t * -0.0002;
@@ -112,6 +112,12 @@ function animate() {
     torus.rotation.x += 0.01;
     torus.rotation.y += 0.005;
     torus.rotation.z += 0.01;
+
+    mars.rotation.x += 0.001;
+    mars.rotation.y += 0.0035;
+    mars.rotation.z += 0.001;
+
+    carl.rotation.y += 0.007;
 
     controls.update();
 
