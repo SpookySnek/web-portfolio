@@ -50,6 +50,9 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
+const spaceBackground = new THREE.TextureLoader().load('../public/spacebg.jpg');
+scene.background = spaceBackground;
+
 function animate() {
     requestAnimationFrame( animate );
 
