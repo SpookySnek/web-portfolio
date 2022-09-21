@@ -55,7 +55,7 @@ scene.background = spaceBackground;
 
 
 const carlTexture = loader.load('../public/carl.jpg');
-const carl = new THREE.Mesh(new THREE.CircleGeometry(3, 64), new THREE.MeshBasicMaterial({ map: carlTexture, side: THREE.DoubleSide }));
+const carl = new THREE.Mesh(new THREE.CircleGeometry(2, 64), new THREE.MeshBasicMaterial({ map: carlTexture, side: THREE.DoubleSide }));
 scene.add(carl);
 
 
