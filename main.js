@@ -50,8 +50,17 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
+
+
 const spaceBackground = new THREE.TextureLoader().load('../public/spacebg.jpg');
 scene.background = spaceBackground;
+
+
+
+const carlTexture = new THREE.TextureLoader().load('../public/carl.jpg');
+const carl = new THREE.Mesh(new THREE.CircleGeometry(3, 64), new THREE.MeshBasicMaterial({ map: carlTexture, side: THREE.DoubleSide }));
+scene.add(carl);
+
 
 function animate() {
     requestAnimationFrame( animate );
