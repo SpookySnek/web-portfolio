@@ -11,6 +11,7 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
+const loader = new THREE.TextureLoader(); 
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -52,19 +53,19 @@ Array(200).fill().forEach(addStar);
 
 
 
-const spaceBackground = new THREE.TextureLoader().load('../public/spacebg.jpg');
+const spaceBackground = loader.load('../public/spacebg.jpg');
 scene.background = spaceBackground;
 
 
 
-const carlTexture = new THREE.TextureLoader().load('../public/carl.jpg');
+const carlTexture = loader.load('../public/carl.jpg');
 const carl = new THREE.Mesh(new THREE.CircleGeometry(3, 64), new THREE.MeshBasicMaterial({ map: carlTexture, side: THREE.DoubleSide }));
 scene.add(carl);
 
 
 
-const marsTexture = new THREE.TextureLoader().load('../public/mars.jpg');
-const normalTexture = new THREE.TextureLoader().load('../public/normal.jpg');
+const marsTexture = loader.load('../public/mars.jpg');
+const normalTexture = loader.load('../public/normal.jpg');
 
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
