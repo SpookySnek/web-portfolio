@@ -7,6 +7,8 @@ import { ArrayCamera } from 'three';
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+camera.position.z = 40;
+camera.position.x = -3;
 
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
@@ -15,7 +17,6 @@ const loader = new THREE.TextureLoader();
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
@@ -32,22 +33,19 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
 
-
-const controls = new OrbitControls(camera, renderer.domElement);
-
 const starGeometry = new THREE.SphereGeometry(0.25, 24, 24);
 const starMaterial = new THREE.MeshStandardMaterial({color: 0xffffff});
 
 function addStar() {
     
     const star = new THREE.Mesh(starGeometry, starMaterial);
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(150));
+    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(250));
 
     star.position.set(x, y, z);
     scene.add(star);
 }
 
-Array(250).fill().forEach(addStar);
+Array(500).fill().forEach(addStar);
 
 
 
@@ -97,8 +95,8 @@ function scrollCamera() {
     torus.rotation.z += 0.03;
   
     camera.position.z = t * -0.01;
-    camera.position.x = t * -0.0002;
-    camera.rotation.y = t * -0.0002;
+    camera.position.x = t * -0.0001;
+    camera.rotation.y = t * -0.0001;
   }
   
   document.body.onscroll = scrollCamera;
@@ -118,8 +116,6 @@ function animate() {
     mars.rotation.z += 0.001;
 
     carl.rotation.y += 0.007;
-
-    controls.update();
 
     renderer.render( scene, camera );
 }
