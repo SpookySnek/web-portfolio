@@ -56,11 +56,11 @@ function addStar() {
 Array(500).fill().forEach(addStar);
 
 // Background
-const spaceBackground = loader.load("../public/spacebg.jpg");
+const spaceBackground = loader.load("./spacebg.jpg");
 scene.background = spaceBackground;
 
 // Face
-const carlTexture = loader.load("../public/carl.jpg");
+const carlTexture = loader.load("./carl.jpg");
 const carl = new THREE.Mesh(
   new THREE.CircleGeometry(2, 64),
   new THREE.MeshBasicMaterial({ map: carlTexture, side: THREE.DoubleSide })
@@ -68,8 +68,8 @@ const carl = new THREE.Mesh(
 scene.add(carl);
 
 // Mars
-const marsTexture = loader.load("../public/mars.jpg");
-const normalTexture = loader.load("../public/normal.jpg");
+const marsTexture = loader.load("./mars.jpg");
+const normalTexture = loader.load("./normal.jpg");
 
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
