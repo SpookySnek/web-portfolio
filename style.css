@@ -32,7 +32,7 @@ main {
 }
 
 h1, h2, h3, blockquote {
-  font-family: Quantico, sans-serif;
+  font-family: quantico, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
