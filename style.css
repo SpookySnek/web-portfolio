@@ -89,12 +89,14 @@ h1, h2, h3, blockquote {
   display: none;
 }
 
+
 .popuptext {
 font-size: xx-large;
 font-weight: bold;
 color: yellow;
 padding-top: 9rem;
 }
+
 
 @media only screen and (max-device-width:480px) {
   .popup { display: block; }
