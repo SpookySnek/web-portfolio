@@ -45,7 +45,7 @@ h1, h2, h3, blockquote {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     margin-bottom: var(--spacing);
   }
 
@@ -100,4 +100,8 @@ padding-top: 9rem;
 
 @media only screen and (max-device-width:480px) {
   .popup { display: block; }
+}
+
+@media only screen and (max-device-width:900px) {
+  h1 { font-size: 3rem; }
 }
