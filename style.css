@@ -105,7 +105,15 @@ blockquote p {
   }
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-device-width: 1200px) {
+  main {
+    padding-top: 0%;
+  }
+  header {
+    padding: 0%;
+  }
+}
+@media only screen and (max-device-width: 1500px) {
   h1 {
     font-size: 3rem;
   }
