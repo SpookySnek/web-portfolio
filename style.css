@@ -99,7 +99,7 @@ blockquote p {
   height: 9rem;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 430px) {
   .popup {
     display: block;
   }
