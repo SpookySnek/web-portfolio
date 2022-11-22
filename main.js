@@ -116,6 +116,17 @@ function scrollCamera() {
 document.body.onscroll = scrollCamera;
 scrollCamera();
 
+// Scroll to top button logic
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const rootElement = document.documentElement;
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
 // Animation loop
 function animate() {
   requestAnimationFrame(animate);
