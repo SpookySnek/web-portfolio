@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/carlicon.png" />
+    <meta name="viewport" content="width=device-width" />
     <script src="https://kit.fontawesome.com/f35b9e145c.js" crossorigin="anonymous"></script>
     <title>Carl's Portfolio</title>
   </head>
@@ -12,8 +12,11 @@
     
     <main>
       <div class="popup">
-        <span class="popuptext">🚨The mobile version of the website is currently in the making! In the meantime, please check back using a computer or tablet to view the website in all its glory!🚨</span>
+        <span class="popuptext">Please put your phone in horizontal mode and enjoy!</span>
+        <br>
+        <img src="rotatephone.png" alt="rotate phone" class="popupimg" />
       </div> 
+
 
       <header>
         <p>Hello, my name is</p>
@@ -44,35 +47,39 @@
       </section>
 
       <section class="light">
-        <h2>👨🏻‍💻 Projects</h2>
-        <h4>This is a little collection of some of my favourite projects, outside of my current projects as a consultant (iceberry)!</h4>
-        <h3>.NET MAUI Sample App</h3>
-        <p>
-          In this project I experiment with different tools and functions in MAUI to further develop my competence, that I can later use to create more apps privately. The app is being developed with different functionalities to try out everything MAUI has to offer and works on iOS, Android, Windows, etc. <br> <a href="https://github.com/SpookySnek/SampleApp">Link</a>
-        </p>
-        <h3>Propono</h3>
-        <p>
-          Propono is a single-day and one-man fullstack-project for the School of Applied Technology, a website where users can add images that are then displayed back in a nice way. The website is complete with backend in ASP.NET Core Web API and uses Entity Framework Core for database management, together with Docker locally, with React (TypeScript) on the front end side. Mobile-First of course! <br> <a href="https://github.com/SpookySnek/Propono">Link</a>
-        </p>
-        <h3>Mob Timer</h3>
-        <p>
-          This is my group's final project at the School of Applied Technology, that we developed in an agile enviroment using SCRUM and mob-programing principles. We chose to make a "mob timer" that is updated in real-time using websockets, and where you can start your own group and distribute a personal link to others who thus can join your group. The front end part is made in react (TypeScript) and for the backend, we used ASP.NET Core Web API in symbiosis with Entity Framework Core and Docker locally, and then deployed on Vercel. When it comes to websockets, we used SignalR for the first time. <br> <a href="https://github.com/Jam-Net-SALT/Saltimer-BE">Link backend</a> <a href="https://github.com/Jam-Net-SALT/Saltimer-FE">Link frontend</a>
-        </p>
-        <h3>Web Portfolio</h3>
-        <p>
-          This is my personal portfolio website that I made to show off my skills and projects. It is made using JavaScript in Vite.js and Three.js. Both Vite and Three are very new to me and are meant to show off my ability to tackle new challanges and technologies! <br> <a href="https://github.com/SpookySnek/web-portfolio">Link</a>
-        <h3>Peritus</h3>
-        <p>
-          Peritus is a fullstack project where users can upload quotes, made with ASP.NET Core Minimal API (.NET 6) with Entity Framework Core for database management in the backend, and React with Typescript for the frontend. <br> <a href="https://github.com/SpookySnek/Peritus-BE">Link backend</a> <a href="https://github.com/SpookySnek/Peritus-FE">Link frontend</a>
-        </p>
-        <h3>Java Game Prototype</h3>
-        <p>
-          At the age of 14, a group of friends and I decided to learn Java and make an MMO game in jMonkeyEngine. We spent many weekends together and finally managed to put together a simple prototype. The knowledge we gained from this project has been invaluable in my quest to become a developer.
-        </p>
-        <h3>LUA Code for roblox</h3>
-        <p>
-          At the age of 8, I wrote my very first piece of code, for the game Roblox. I learned very simple concepts in programming and often succeeded in what I wanted to do by programming in simple text editors. This is where my dream of one day becoming a real developer started!
-        </p>
+          <h2>👨🏻‍💻 Projects</h2>
+          <h4>This is a little collection of some of my favourite projects!</h4>
+          <h3>Internal Recruitment Platform</h3>
+          <p>
+              At iceberry (see Work Experiences below) I was tasked with starting up a new internal recruitment platform from scratch together with another colleague. We built the platform in mainly .NET (C#) utilizing a microservice architecture with Kubernetes, and used React with Redux on the front end. We automized the build using GitHub Actions, Docker, Docker Compose etc. During this project I took a deep dive into the world of microservices and Kubernetes deployment for the first time, and it went very succesfully!
+          </p>
+          <h3>.NET MAUI Sample App</h3>
+          <p>
+              In this project I experiment with different tools and functions in MAUI to further develop my competence, that I can later use to create more apps privately. The app is being developed with different functionalities to try out everything MAUI has to offer and works on iOS, Android, Windows, etc. <br> <a href="https://github.com/SpookySnek/SampleApp">Link</a>
+          </p>
+          <h3>Propono</h3>
+          <p>
+              Propono is a single-day and one-man fullstack-project for the School of Applied Technology, a website where users can add images that are then displayed back in a nice way. The website is complete with backend in ASP.NET Core Web API and uses Entity Framework Core for database management, together with Docker locally, with React (TypeScript) on the front end side. Mobile-First of course! <br> <a href="https://github.com/SpookySnek/Propono">Link</a>
+          </p>
+          <h3>Mob Timer</h3>
+          <p>
+              This is my group's final project at the School of Applied Technology, that we developed in an agile enviroment using SCRUM and mob-programing principles. We chose to make a "mob timer" that is updated in real-time using websockets, and where you can start your own group and distribute a personal link to others who thus can join your group. The front end part is made in react (TypeScript) and for the backend, we used ASP.NET Core Web API in symbiosis with Entity Framework Core and Docker locally, and then deployed on Vercel. When it comes to websockets, we used SignalR for the first time. <br> <a href="https://github.com/Jam-Net-SALT/Saltimer-BE">Link backend</a> <a href="https://github.com/Jam-Net-SALT/Saltimer-FE">Link frontend</a>
+          </p>
+          <h3>Web Portfolio</h3>
+          <p>
+              This is my personal portfolio website that I made to show off my skills and projects. It is made using JavaScript in Vite.js and Three.js. Both Vite and Three are very new to me and are meant to show off my ability to tackle new challanges and technologies! <br> <a href="https://github.com/SpookySnek/web-portfolio">Link</a>
+              <h3>Peritus</h3>
+          <p>
+              Peritus is a fullstack project where users can upload quotes, made with ASP.NET Core Minimal API (.NET 6) with Entity Framework Core for database management in the backend, and React with Typescript for the frontend. <br> <a href="https://github.com/SpookySnek/Peritus-BE">Link backend</a> <a href="https://github.com/SpookySnek/Peritus-FE">Link frontend</a>
+          </p>
+          <h3>Java Game Prototype</h3>
+          <p>
+              At the age of 14, a group of friends and I decided to learn Java and make an MMO game in jMonkeyEngine. We spent many weekends together and finally managed to put together a simple prototype. The knowledge we gained from this project has been invaluable in my quest to become a developer.
+          </p>
+          <h3>LUA Code for roblox</h3>
+          <p>
+              At the age of 8, I wrote my very first piece of code, for the game Roblox. I learned very simple concepts in programming and often succeeded in what I wanted to do by programming in simple text editors. This is where my dream of one day becoming a real developer started!
+          </p>
       </section>
 
       <blockquote>
@@ -82,13 +89,13 @@
       <section class="left">
         <h2>🦾 Work History</h2>
 
-        <h3>Iceberry<br> 2022 - ongoing</h3>
+        <h3>Iceberry<br> Aug 2022 - Nov 2022</h3>
         <p>
-          In my job as a full stack developer-consultant for iceberry I get to join teams from iceberry's clients and work with them to solve their projects.<br> <a href="https://www.iceberry.se/">Link</a>
+           In my job as a full stack developer for iceberry I got to start up an internal recruitment platform from scratch, which has been a wonderfully educative experience! (For more info, see "Projects")<br> <a href="https://www.iceberry.se/">Link</a>
         </p>
         <h3>School of Applied Technology<br> 2022 - ongoing</h3>
         <p>
-          After completing the very intensive bootcamp at SALT, I was made into a .NET Full Stack Developer and have since then been working as a consultant for iceberry.<br> <a href="https://www.salt.dev">Link</a>
+          After completing the very intensive bootcamp at SALT, I was made into a .NET Full Stack Developer and have since then been working as a consultant.<br> <a href="https://www.salt.dev">Link</a>
         </p>
         <h3>IMEK Hanteringssystem AB<br> 2018 - 2021</h3>
         <p>
@@ -130,6 +137,7 @@
       <blockquote>
         <p>Thanks for visiting!</p>
       </blockquote>
+      <button id="scrollToTopBtn">☝️</button>
 
 
     </main>

@@ -23,6 +23,14 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 
+// Resize handler
+window.addEventListener("resize", onWindowResize, false);
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
 // Ring
 const geometry = new THREE.TorusGeometry(10, 0.9, 16, 100);
 const material = new THREE.MeshPhongMaterial({
@@ -107,6 +115,17 @@ function scrollCamera() {
 
 document.body.onscroll = scrollCamera;
 scrollCamera();
+
+// Scroll to top button logic
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const rootElement = document.documentElement;
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
 
 // Animation loop
 function animate() {
