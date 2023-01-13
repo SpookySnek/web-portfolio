@@ -2,4 +2,4 @@
 
 Read me in progress! Check the website out at https://www.carlmolsson.net/
 
-Made in vite and Three.js
+Made in Vite and Three.js
