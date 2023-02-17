@@ -98,15 +98,15 @@ carl.position.x = 2;
 // Scroll Animation
 function scrollCamera() {
   const t = document.body.getBoundingClientRect().top;
-  mars.rotation.x += 0.01;
-  mars.rotation.y += 0.035;
-  mars.rotation.z += 0.01;
+  mars.rotation.x += 0.005;
+  mars.rotation.y += 0.0035;
+  mars.rotation.z += 0.005;
 
-  carl.rotation.y += 0.01;
+  carl.rotation.y += 0.005;
 
-  torus.rotation.x += 0.03;
-  torus.rotation.y += 0.009;
-  torus.rotation.z += 0.03;
+  torus.rotation.x += 0.008;
+  torus.rotation.y += 0.006;
+  torus.rotation.z += 0.008;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0001;
@@ -131,15 +131,18 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  // torus.rotation.x += 0.007;
+  // torus.rotation.y += 0.003;
+  // torus.rotation.z += 0.007;
+  torus.rotateX(0.007);
+  torus.rotateY(0.003);
+  torus.rotateZ(0.004);
 
-  mars.rotation.x += 0.001;
-  mars.rotation.y += 0.0035;
-  mars.rotation.z += 0.001;
+  mars.rotation.x += 0.0008;
+  mars.rotation.y += 0.0025;
+  mars.rotation.z += 0.0003;
 
-  carl.rotation.y += 0.007;
+  carl.rotation.y += 0.004;
 
   renderer.render(scene, camera);
 }
