@@ -48,6 +48,18 @@ header {
   margin-bottom: var(--spacing);
 }
 
+a {
+  background: -webkit-linear-gradient(rgb(208, 0, 255), rgb(111, 0, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.github, .linkedin {
+  padding: 0.5rem;
+  margin: -0.3rem;
+}
+
 section {
   grid-column: 2 / 8;
   padding: 1rem;
