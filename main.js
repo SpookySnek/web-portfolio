@@ -131,9 +131,12 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.007;
-  torus.rotation.y += 0.003;
-  torus.rotation.z += 0.007;
+  // torus.rotation.x += 0.007;
+  // torus.rotation.y += 0.003;
+  // torus.rotation.z += 0.007;
+  torus.rotateX(0.007);
+  torus.rotateY(0.003);
+  torus.rotateZ(0.004);
 
   mars.rotation.x += 0.0008;
   mars.rotation.y += 0.0025;
