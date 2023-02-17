@@ -34,7 +34,8 @@ main {
 h1,
 h2,
 h3,
-blockquote {
+blockquote,
+#scrollToTopBtn {
   font-family: quantico, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -141,13 +142,17 @@ blockquote p {
 }
 
 #scrollToTopBtn {
-  background-color: black;
-  border: 0.1px solid white;
-  border-radius: 0.1rem;
+  background: -webkit-linear-gradient( rgb(208, 0, 255), rgb(111, 0, 255));
+  text-decoration: none;
   color: white;
+  border: none;
+  border-radius: 0.1rem;
   cursor: pointer;
   font-size: 1.5rem;
   line-height: 3rem;
   width: 20rem;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#scrollToTopBtn:hover {
+  background: -webkit-linear-gradient( rgb(111, 0, 255), rgb(208, 0, 255));
 }
