@@ -92,8 +92,12 @@ blockquote p {
   line-height: 1.1;
 }
 
-.left {
+.right {
   grid-column: 6 / 12;
+}
+
+.contact {
+  grid-column: 2 / 5;
 }
 
 .popup {
@@ -138,6 +142,9 @@ blockquote p {
 @media only screen and (max-device-width: 1500px) {
   h1 {
     font-size: 3rem;
+  }
+  .contact {
+    grid-column: 2 / 8;
   }
 }
 
